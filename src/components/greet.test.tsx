@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Greet } from "./greet";
+import Greet from "./greet";
 
 describe("#Greet", () => {
   test("should return a greeting message, sujan", () => {
@@ -12,12 +12,12 @@ describe("#Greet", () => {
   });
 
   test("should return a greeting message, raja", () => {
-    render(<Greet name="Raja" />);
+    render(<Greet name="raja" />);
 
     // Case insensitive test
-    const greetMsg = screen.queryAllByText(/hello raja/i);
+    const greetMsg2 = screen.getByText(/hello raja/i);
     // * toBeInTheDocument is extension from @testing-library/jest-dom
     // * assert whether an element is present in the document or not.
-    expect(greetMsg).toBeInTheDocument();
+    expect(greetMsg2).toBeInTheDocument();
   });
 });

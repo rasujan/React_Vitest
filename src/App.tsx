@@ -1,9 +1,11 @@
 import "./App.css";
+import Login from "./components/forms/login/login";
 
 function App() {
   return (
     <>
-      <p>count</p>
+      <p> count</p>
+      <Login />
     </>
   );
 }

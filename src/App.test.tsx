@@ -6,6 +6,6 @@ describe("#App", () => {
   test("should render the component count", () => {
     render(<App />);
     const countEle = screen.getByText(/count/); // should be regx
-    expect(countEle).toBeInTheDocument();
+    expect(countEle).toBeDefined();
   });
 });

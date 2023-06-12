@@ -10,6 +10,9 @@ const Login = () => {
   return (
     <>
       <h1>Login</h1>
+
+      <img src="https://via.placeholder.com/250" alt="placeholder img" />
+
       <form id="login-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username-input">Username</label>
@@ -37,6 +40,8 @@ const Login = () => {
         <div>
           <button type="submit">Login</button>
         </div>
+
+        <p>Privacy Policy, Terms of Service, and Cookie Notice.</p>
       </form>
     </>
   );

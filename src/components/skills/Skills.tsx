@@ -1,7 +1,17 @@
+import React from "react";
+
 type propT = {
   skills: string[];
 };
 const Skills = ({ skills }: propT) => {
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsLoggedIn(true);
+    }, 500);
+  });
+
   return (
     <>
       <ul>
@@ -9,6 +19,8 @@ const Skills = ({ skills }: propT) => {
           <li key={index}>{skill}</li>
         ))}
       </ul>
+
+      {isLoggedIn ? <button>Start learning</button> : <button> Login</button>}
     </>
   );
 };
